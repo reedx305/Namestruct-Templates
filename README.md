@@ -1,8 +1,8 @@
 # NameStruct Extension
 
-NameStruct is a powerful extension that allows you to load custom JSON templates for enhanced naming and structuring capabilities.
+NameStruct is an extension that allows you to load custom structured JSON templates for enhanced naming and structuring capabilities.
 
-## Installation and Setup
+## Loading First Template and Setup
 
 1. **Get the JSON File URL**
    - Navigate to GitHub and open the raw file of either `example1.json` or `example2.json`
@@ -24,8 +24,8 @@ NameStruct is a powerful extension that allows you to load custom JSON templates
 
 ## Example JSON Files
 
-- [example1.json](link-to-example1)
-- [example2.json](link-to-example2)
+- [example1.json](./example1.json)
+- [example2.json](./example2.json)
 
 ## Troubleshooting
 
