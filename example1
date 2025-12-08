@@ -1,0 +1,35 @@
+[
+  {
+    "id": "server-naming-example",
+    "name": "Server Naming Example",
+    "description": "Naming convention for servers",
+    "fields": [
+      { "key": "PUBLIC", "type": "checkbox", "label": "Public Server" },
+      { "key": "env", "type": "dropdown", "label": "Environment", "options": [
+        { "value": "PROD", "label": "Production" },
+        { "value": "DEV", "label": "Development" },
+        { "value": "QA", "label": "Quality Assurance" }
+      ] },
+      { "key": "role", "type": "text", "label": "Role"},
+      { "key": "location", "type": "text", "label": "Location"},
+      { "key": "number", "type": "text", "label": "Server Number"},
+      { "key": "TEST", "type": "checkbox", "label": "Test Server"}
+    ],
+    "template": "{{PUBLIC}}-{{env}}-{{role}}-{{location}}-{{number}}-{{TEST}}"
+  },
+  {
+    "id": "static-item-demo",
+    "name": "Static Item Example",
+    "description": "Example with a static item and all field types.",
+    "fields": [
+      { "key": "project", "type": "text", "label": "Project Name" },
+      { "key": "type", "type": "dropdown", "label": "Type", "options": [
+        { "value": "API", "label": "API" },
+        { "value": "WEB", "label": "Web App" },
+        { "value": "DB", "label": "Database" }
+      ] },
+      { "key": "archived", "type": "checkbox", "label": "Archived?" }
+    ],
+    "template": "[{{project}}][STATIC][{{type}}][{{archived}}]"
+  }
+]
