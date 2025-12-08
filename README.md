@@ -6,7 +6,8 @@ NameStruct is an extension that allows you to load custom structured JSON templa
 
 1. **Get the JSON File URL**
    - Navigate to GitHub and open the raw file of either `example1.json` or `example2.json`
-   - Copy the URL of the raw file
+   - Copy the URL of the raw json file (`Raw` button is in the top right next to download)
+      - URLs for raw file will start with `raw.githubusercontent.com`
 
 2. **Configure NameStruct**
    - Open the NameStruct extension in your browser
