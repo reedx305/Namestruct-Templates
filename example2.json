@@ -1,0 +1,442 @@
+[
+  {
+    "id": "server-naming-example",
+    "name": "Server Naming Example",
+    "description": "Naming convention for servers",
+    "fields": [
+      { "key": "PUBLIC", "type": "checkbox", "label": "Public Server" },
+      { "key": "env", "type": "dropdown", "label": "Environment", "options": [
+        { "value": "PROD", "label": "Production" },
+        { "value": "DEV", "label": "Development" },
+        { "value": "QA", "label": "Quality Assurance" }
+      ] },
+      { "key": "role", "type": "text", "label": "Role"},
+      { "key": "location", "type": "text", "label": "Location"},
+      { "key": "number", "type": "text", "label": "Server Number"},
+      { "key": "TEST", "type": "checkbox", "label": "Test Server"}
+    ],
+    "template": "{{PUBLIC}}-{{env}}-{{role}}-{{location}}-{{number}}-{{TEST}}"
+  },
+  {
+    "id": "static-item-demo",
+    "name": "Static Item Example",
+    "description": "Example with a static item and all field types.",
+    "fields": [
+      { "key": "project", "type": "text", "label": "Project Name" },
+      { "key": "type", "type": "dropdown", "label": "Type", "options": [
+        { "value": "API", "label": "API" },
+        { "value": "WEB", "label": "Web App" },
+        { "value": "DB", "label": "Database" }
+      ] },
+      { "key": "archived", "type": "checkbox", "label": "Archived?" }
+    ],
+    "template": "[{{project}}][STATIC][{{type}}][{{archived}}]"
+  },
+  {
+    "id": "web-app-config",
+    "name": "Web Application Configuration",
+    "description": "Configuration for web applications",
+    "fields": [
+      { "key": "app_name", "type": "text", "label": "Application Name" },
+      { "key": "version", "type": "text", "label": "Version" },
+      { "key": "status", "type": "dropdown", "label": "Status", "options": [
+        { "value": "ACTIVE", "label": "Active" },
+        { "value": "INACTIVE", "label": "Inactive" }
+      ] },
+      { "key": "secure", "type": "checkbox", "label": "Secure Connection" }
+    ],
+    "template": "{{app_name}}_v{{version}}_{{status}}_{{secure}}"
+  },
+  {
+    "id": "database-server",
+    "name": "Database Server",
+    "description": "Database server naming convention",
+    "fields": [
+      { "key": "db_type", "type": "dropdown", "label": "Database Type", "options": [
+        { "value": "MYSQL", "label": "MySQL" },
+        { "value": "POSTGRES", "label": "PostgreSQL" },
+        { "value": "MONGO", "label": "MongoDB" }
+      ] },
+      { "key": "env", "type": "dropdown", "label": "Environment", "options": [
+        { "value": "PROD", "label": "Production" },
+        { "value": "STAGING", "label": "Staging" },
+        { "value": "DEV", "label": "Development" }
+      ] },
+      { "key": "instance", "type": "text", "label": "Instance Number" },
+      { "key": "backup", "type": "checkbox", "label": "Enable Backup" }
+    ],
+    "template": "{{db_type}}_{{env}}_{{instance}}_{{backup}}"
+  },
+  {
+    "id": "api-endpoint",
+    "name": "API Endpoint",
+    "description": "API endpoint naming convention",
+    "fields": [
+      { "key": "api_name", "type": "text", "label": "API Name" },
+      { "key": "version", "type": "text", "label": "Version" },
+      { "key": "endpoint", "type": "text", "label": "Endpoint Path" },
+      { "key": "secure", "type": "checkbox", "label": "Secure" }
+    ],
+    "template": "{{api_name}}_v{{version}}_{{endpoint}}_{{secure}}"
+  },
+  {
+    "id": "storage-config",
+    "name": "Storage Configuration",
+    "description": "Storage configuration naming",
+    "fields": [
+      { "key": "storage_type", "type": "dropdown", "label": "Storage Type", "options": [
+        { "value": "S3", "label": "Amazon S3" },
+        { "value": "GCS", "label": "Google Cloud Storage" },
+        { "value": "AZURE", "label": "Azure Blob Storage" }
+      ] },
+      { "key": "bucket", "type": "text", "label": "Bucket Name" },
+      { "key": "region", "type": "text", "label": "Region" },
+      { "key": "encrypted", "type": "checkbox", "label": "Encrypted" }
+    ],
+    "template": "{{storage_type}}_{{bucket}}_{{region}}_{{encrypted}}"
+  },
+  {
+    "id": "ci-cd-pipeline",
+    "name": "CI/CD Pipeline",
+    "description": "CI/CD pipeline configuration",
+    "fields": [
+      { "key": "project", "type": "text", "label": "Project Name" },
+      { "key": "branch", "type": "text", "label": "Branch Name" },
+      { "key": "pipeline", "type": "text", "label": "Pipeline Type" },
+      { "key": "active", "type": "checkbox", "label": "Active Pipeline" }
+    ],
+    "template": "{{project}}_{{branch}}_{{pipeline}}_{{active}}"
+  },
+  {
+    "id": "container-image",
+    "name": "Container Image",
+    "description": "Container image naming convention",
+    "fields": [
+      { "key": "registry", "type": "text", "label": "Registry" },
+      { "key": "image", "type": "text", "label": "Image Name" },
+      { "key": "tag", "type": "text", "label": "Tag" },
+      { "key": "latest", "type": "checkbox", "label": "Latest Tag" }
+    ],
+    "template": "{{registry}}/{{image}}:{{tag}}_{{latest}}"
+  },
+  {
+    "id": "load-balancer",
+    "name": "Load Balancer",
+    "description": "Load balancer configuration",
+    "fields": [
+      { "key": "lb_name", "type": "text", "label": "Load Balancer Name" },
+      { "key": "protocol", "type": "dropdown", "label": "Protocol", "options": [
+        { "value": "HTTP", "label": "HTTP" },
+        { "value": "HTTPS", "label": "HTTPS" },
+        { "value": "TCP", "label": "TCP" }
+      ] },
+      { "key": "port", "type": "text", "label": "Port" },
+      { "key": "enabled", "type": "checkbox", "label": "Enabled" }
+    ],
+    "template": "{{lb_name}}_{{protocol}}_{{port}}_{{enabled}}"
+  },
+  {
+    "id": "dns-record",
+    "name": "DNS Record",
+    "description": "DNS record configuration",
+    "fields": [
+      { "key": "domain", "type": "text", "label": "Domain Name" },
+      { "key": "record_type", "type": "dropdown", "label": "Record Type", "options": [
+        { "value": "A", "label": "A Record" },
+        { "value": "CNAME", "label": "CNAME Record" },
+        { "value": "MX", "label": "MX Record" }
+      ] },
+      { "key": "value", "type": "text", "label": "Record Value" },
+      { "key": "ttl", "type": "text", "label": "TTL" }
+    ],
+    "template": "{{domain}}_{{record_type}}_{{value}}_{{ttl}}"
+  },
+  {
+    "id": "security-group",
+    "name": "Security Group",
+    "description": "Security group configuration",
+    "fields": [
+      { "key": "sg_name", "type": "text", "label": "Security Group Name" },
+      { "key": "protocol", "type": "dropdown", "label": "Protocol", "options": [
+        { "value": "TCP", "label": "TCP" },
+        { "value": "UDP", "label": "UDP" },
+        { "value": "ICMP", "label": "ICMP" }
+      ] },
+      { "key": "port", "type": "text", "label": "Port Range" },
+      { "key": "allowed", "type": "checkbox", "label": "Allow Access" }
+    ],
+    "template": "{{sg_name}}_{{protocol}}_{{port}}_{{allowed}}"
+  },
+  {
+    "id": "monitoring-alert",
+    "name": "Monitoring Alert",
+    "description": "Monitoring alert configuration",
+    "fields": [
+      { "key": "alert_name", "type": "text", "label": "Alert Name" },
+      { "key": "metric", "type": "text", "label": "Metric Name" },
+      { "key": "threshold", "type": "text", "label": "Threshold Value" },
+      { "key": "active", "type": "checkbox", "label": "Active Alert" }
+    ],
+    "template": "{{alert_name}}_{{metric}}_{{threshold}}_{{active}}"
+  },
+  {
+    "id": "backup-schedule",
+    "name": "Backup Schedule",
+    "description": "Backup schedule configuration",
+    "fields": [
+      { "key": "backup_name", "type": "text", "label": "Backup Name" },
+      { "key": "frequency", "type": "dropdown", "label": "Frequency", "options": [
+        { "value": "DAILY", "label": "Daily" },
+        { "value": "WEEKLY", "label": "Weekly" },
+        { "value": "MONTHLY", "label": "Monthly" }
+      ] },
+      { "key": "retention", "type": "text", "label": "Retention Days" },
+      { "key": "enabled", "type": "checkbox", "label": "Enabled" }
+    ],
+    "template": "{{backup_name}}_{{frequency}}_{{retention}}_{{enabled}}"
+  },
+  {
+    "id": "network-vpc",
+    "name": "Network VPC",
+    "description": "Virtual Private Cloud configuration",
+    "fields": [
+      { "key": "vpc_name", "type": "text", "label": "VPC Name" },
+      { "key": "cidr", "type": "text", "label": "CIDR Block" },
+      { "key": "region", "type": "text", "label": "Region" },
+      { "key": "public", "type": "checkbox", "label": "Public VPC" }
+    ],
+    "template": "{{vpc_name}}_{{cidr}}_{{region}}_{{public}}"
+  },
+  {
+    "id": "iam-role",
+    "name": "IAM Role",
+    "description": "IAM role configuration",
+    "fields": [
+      { "key": "role_name", "type": "text", "label": "Role Name" },
+      { "key": "service", "type": "dropdown", "label": "Service", "options": [
+        { "value": "EC2", "label": "EC2" },
+        { "value": "S3", "label": "S3" },
+        { "value": "LAMBDA", "label": "Lambda" }
+      ] },
+      { "key": "permissions", "type": "text", "label": "Permissions" },
+      { "key": "active", "type": "checkbox", "label": "Active" }
+    ],
+    "template": "{{role_name}}_{{service}}_{{permissions}}_{{active}}"
+  },
+  {
+    "id": "cloudfront-distribution",
+    "name": "CloudFront Distribution",
+    "description": "CloudFront distribution configuration",
+    "fields": [
+      { "key": "distribution", "type": "text", "label": "Distribution ID" },
+      { "key": "origin", "type": "text", "label": "Origin Domain" },
+      { "key": "cache", "type": "text", "label": "Cache Behavior" },
+      { "key": "enabled", "type": "checkbox", "label": "Enabled" }
+    ],
+    "template": "{{distribution}}_{{origin}}_{{cache}}_{{enabled}}"
+  },
+  {
+    "id": "lambda-function",
+    "name": "Lambda Function",
+    "description": "Lambda function configuration",
+    "fields": [
+      { "key": "function_name", "type": "text", "label": "Function Name" },
+      { "key": "runtime", "type": "dropdown", "label": "Runtime", "options": [
+        { "value": "NODEJS", "label": "Node.js" },
+        { "value": "PYTHON", "label": "Python" },
+        { "value": "RUBY", "label": "Ruby" }
+      ] },
+      { "key": "memory", "type": "text", "label": "Memory (MB)" },
+      { "key": "timeout", "type": "text", "label": "Timeout (Seconds)" }
+    ],
+    "template": "{{function_name}}_{{runtime}}_{{memory}}_{{timeout}}"
+  },
+  {
+    "id": "s3-bucket",
+    "name": "S3 Bucket",
+    "description": "S3 bucket configuration",
+    "fields": [
+      { "key": "bucket_name", "type": "text", "label": "Bucket Name" },
+      { "key": "region", "type": "text", "label": "Region" },
+      { "key": "versioning", "type": "checkbox", "label": "Versioning Enabled" },
+      { "key": "encryption", "type": "checkbox", "label": "Encryption Enabled" }
+    ],
+    "template": "{{bucket_name}}_{{region}}_{{versioning}}_{{encryption}}"
+  },
+  {
+    "id": "ec2-instance",
+    "name": "EC2 Instance",
+    "description": "EC2 instance configuration",
+    "fields": [
+      { "key": "instance_id", "type": "text", "label": "Instance ID" },
+      { "key": "ami", "type": "text", "label": "AMI ID" },
+      { "key": "instance_type", "type": "text", "label": "Instance Type" },
+      { "key": "running", "type": "checkbox", "label": "Running" }
+    ],
+    "template": "{{instance_id}}_{{ami}}_{{instance_type}}_{{running}}"
+  },
+  {
+    "id": "kubernetes-cluster",
+    "name": "Kubernetes Cluster",
+    "description": "Kubernetes cluster configuration",
+    "fields": [
+      { "key": "cluster_name", "type": "text", "label": "Cluster Name" },
+      { "key": "version", "type": "text", "label": "Kubernetes Version" },
+      { "key": "nodes", "type": "text", "label": "Number of Nodes" },
+      { "key": "autoscaling", "type": "checkbox", "label": "Autoscaling Enabled" }
+    ],
+    "template": "{{cluster_name}}_{{version}}_{{nodes}}_{{autoscaling}}"
+  },
+  {
+    "id": "firewall-rule",
+    "name": "Firewall Rule",
+    "description": "Firewall rule configuration",
+    "fields": [
+      { "key": "rule_name", "type": "text", "label": "Rule Name" },
+      { "key": "source", "type": "text", "label": "Source IP" },
+      { "key": "destination", "type": "text", "label": "Destination Port" },
+      { "key": "allow", "type": "checkbox", "label": "Allow Traffic" }
+    ],
+    "template": "{{rule_name}}_{{source}}_{{destination}}_{{allow}}"
+  },
+  {
+    "id": "ssl-certificate",
+    "name": "SSL Certificate",
+    "description": "SSL certificate configuration",
+    "fields": [
+      { "key": "cert_name", "type": "text", "label": "Certificate Name" },
+      { "key": "domain", "type": "text", "label": "Domain" },
+      { "key": "validity", "type": "text", "label": "Validity Period" },
+      { "key": "valid", "type": "checkbox", "label": "Valid Certificate" }
+    ],
+    "template": "{{cert_name}}_{{domain}}_{{validity}}_{{valid}}"
+  },
+  {
+    "id": "dns-zone",
+    "name": "DNS Zone",
+    "description": "DNS zone configuration",
+    "fields": [
+      { "key": "zone_name", "type": "text", "label": "Zone Name" },
+      { "key": "type", "type": "dropdown", "label": "Zone Type", "options": [
+        { "value": "PUBLIC", "label": "Public" },
+        { "value": "PRIVATE", "label": "Private" }
+      ] },
+      { "key": "records", "type": "text", "label": "Number of Records" },
+      { "key": "active", "type": "checkbox", "label": "Active Zone" }
+    ],
+    "template": "{{zone_name}}_{{type}}_{{records}}_{{active}}"
+  },
+  {
+    "id": "route53-record",
+    "name": "Route53 Record",
+    "description": "Route53 record configuration",
+    "fields": [
+      { "key": "record_name", "type": "text", "label": "Record Name" },
+      { "key": "type", "type": "dropdown", "label": "Record Type", "options": [
+        { "value": "A", "label": "A Record" },
+        { "value": "CNAME", "label": "CNAME Record" },
+        { "value": "MX", "label": "MX Record" }
+      ] },
+      { "key": "value", "type": "text", "label": "Record Value" },
+      { "key": "ttl", "type": "text", "label": "TTL" }
+    ],
+    "template": "{{record_name}}_{{type}}_{{value}}_{{ttl}}"
+  },
+  {
+    "id": "lambda-layer",
+    "name": "Lambda Layer",
+    "description": "Lambda layer configuration",
+    "fields": [
+      { "key": "layer_name", "type": "text", "label": "Layer Name" },
+      { "key": "version", "type": "text", "label": "Version" },
+      { "key": "runtime", "type": "dropdown", "label": "Runtime", "options": [
+        { "value": "NODEJS", "label": "Node.js" },
+        { "value": "PYTHON", "label": "Python" }
+      ] },
+      { "key": "compatible", "type": "checkbox", "label": "Compatible" }
+    ],
+    "template": "{{layer_name}}_{{version}}_{{runtime}}_{{compatible}}"
+  },
+  {
+    "id": "dynamodb-table",
+    "name": "DynamoDB Table",
+    "description": "DynamoDB table configuration",
+    "fields": [
+      { "key": "table_name", "type": "text", "label": "Table Name" },
+      { "key": "mode", "type": "dropdown", "label": "Mode", "options": [
+        { "value": "PROVISIONED", "label": "Provisioned" },
+        { "value": "PAY_PER_REQUEST", "label": "Pay per Request" }
+      ] },
+      { "key": "read_capacity", "type": "text", "label": "Read Capacity" },
+      { "key": "write_capacity", "type": "text", "label": "Write Capacity" }
+    ],
+    "template": "{{table_name}}_{{mode}}_{{read_capacity}}_{{write_capacity}}"
+  },
+  {
+    "id": "rds-instance",
+    "name": "RDS Instance",
+    "description": "RDS instance configuration",
+    "fields": [
+      { "key": "instance_name", "type": "text", "label": "Instance Name" },
+      { "key": "engine", "type": "dropdown", "label": "Database Engine", "options": [
+        { "value": "MYSQL", "label": "MySQL" },
+        { "value": "POSTGRES", "label": "PostgreSQL" }
+      ] },
+      { "key": "size", "type": "text", "label": "Instance Size" },
+      { "key": "backup", "type": "checkbox", "label": "Backup Enabled" }
+    ],
+    "template": "{{instance_name}}_{{engine}}_{{size}}_{{backup}}"
+  },
+  {
+    "id": "sns-topic",
+    "name": "SNS Topic",
+    "description": "SNS topic configuration",
+    "fields": [
+      { "key": "topic_name", "type": "text", "label": "Topic Name" },
+      { "key": "protocol", "type": "dropdown", "label": "Protocol", "options": [
+        { "value": "EMAIL", "label": "Email" },
+        { "value": "SMS", "label": "SMS" },
+        { "value": "HTTP", "label": "HTTP" }
+      ] },
+      { "key": "endpoint", "type": "text", "label": "Endpoint" },
+      { "key": "active", "type": "checkbox", "label": "Active" }
+    ],
+    "template": "{{topic_name}}_{{protocol}}_{{endpoint}}_{{active}}"
+  },
+  {
+    "id": "sqs-queue",
+    "name": "SQS Queue",
+    "description": "SQS queue configuration",
+    "fields": [
+      { "key": "queue_name", "type": "text", "label": "Queue Name" },
+      { "key": "visibility", "type": "text", "label": "Visibility Timeout" },
+      { "key": "retention", "type": "text", "label": "Retention Period" },
+      { "key": "delay", "type": "text", "label": "Delay Seconds" }
+    ],
+    "template": "{{queue_name}}_{{visibility}}_{{retention}}_{{delay}}"
+  },
+  {
+    "id": "ecs-cluster",
+    "name": "ECS Cluster",
+    "description": "ECS cluster configuration",
+    "fields": [
+      { "key": "cluster_name", "type": "text", "label": "Cluster Name" },
+      { "key": "capacity", "type": "text", "label": "Capacity Provider" },
+      { "key": "services", "type": "text", "label": "Number of Services" },
+      { "key": "active", "type": "checkbox", "label": "Active" }
+    ],
+    "template": "{{cluster_name}}_{{capacity}}_{{services}}_{{active}}"
+  },
+  {
+    "id": "ecs-service",
+    "name": "ECS Service",
+    "description": "ECS service configuration",
+    "fields": [
+      { "key": "service_name", "type": "text", "label": "Service Name" },
+      { "key": "cluster", "type": "text", "label": "Cluster Name" },
+      { "key": "task_count", "type": "text", "label": "Task Count" },
+      { "key": "running", "type": "checkbox", "label": "Running" }
+    ],
+    "template": "{{service_name}}_{{cluster}}_{{task_count}}_{{running}}"
+  }
+]
