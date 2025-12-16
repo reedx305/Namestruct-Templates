@@ -77,7 +77,7 @@
       { "key": "endpoint", "type": "text", "label": "Endpoint Path" },
       { "key": "secure", "type": "checkbox", "label": "Secure" }
     ],
-    "template": "{{api_name}}_v{{version}}_{{endpoint}}_{{secure}}"
+    "template": "[{{api_name}}]-[v{{version}}]-[{{endpoint}}]-{{secure}}"
   },
   {
     "id": "storage-config",
