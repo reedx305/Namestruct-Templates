@@ -45,7 +45,7 @@
       ] },
       { "key": "secure", "type": "checkbox", "label": "Secure Connection" }
     ],
-    "template": "{{app_name}}_v{{version}}_{{status}}_{{secure}}"
+    "template": "[{{app_name}}]{{version}} {{status}}-{{secure}}"
   },
   {
     "id": "database-server",
