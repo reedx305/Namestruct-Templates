@@ -177,7 +177,7 @@
       { "key": "threshold", "type": "text", "label": "Threshold Value" },
       { "key": "active", "type": "checkbox", "label": "Active Alert" }
     ],
-    "template": "{{alert_name}}_{{metric}}_{{threshold}}_{{active}}"
+    "template": "[{{alert_name}}] {{metric}}_{{threshold}}_{{active}}"
   },
   {
     "id": "backup-schedule",
